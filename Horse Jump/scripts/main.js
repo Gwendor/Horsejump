@@ -54,7 +54,7 @@ function createBoard() { //Initial action on load - Draws the divs and creates t
 function canselect(x,y){ //changes color of visitable fields to black, resets color of previous field
     prevColor = document.getElementById(x.toString()+y.toString()).style.backgroundColor;
     if (board[x][y].canbeselected === true){
-        document.getElementById(x.toString()+y.toString()).style.backgroundColor="black";
+        document.getElementById(x.toString()+y.toString()).style.backgroundColor="gray";
         document.getElementById(x.toString()+y.toString()).addEventListener("mouseleave", function(){restoreColor(x,y)});
         document.getElementById(x.toString()+y.toString()).addEventListener("click", function(){restoreColor(x,y)});
         document.getElementById(x.toString()+y.toString()).removeEventListener("mouseover", function(){canselect(x,y)});
